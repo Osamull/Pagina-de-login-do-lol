@@ -1,0 +1,257 @@
+/*Importando a fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+* {
+    /* Setando valores padrões*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+    /*root: cria variáveis no css*/
+    --white: #fff;
+    --whitesmoke: #f9f9f9;
+    --light-grey: #ececec;
+    --grey: #c4c4c4;
+    --medium-grey: #a7a7a7;
+    --deep-grey: #343434;
+    --black: #000;
+    --blue: #1b77f3;
+    --red: #c73c3f;
+}
+
+main {
+    /* Definindo o display da main*/
+    display: flex;
+}
+
+.form_login {
+    /*  Definindo medidas para a div "login"*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+
+    /* clamp: define um espaçamento mínimo, padronizado e máximo, para caso a tela fique menor ela siga o tamanho da view port*/
+    padding: clamp(35px, 8%, 20px);
+}
+
+.div_login {
+    /* Definindo medidas para a div "div_login"*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_logo {
+    /* Definindo medidas da logo*/
+    width: 130px;
+    margin-bottom: 60px;
+}
+
+.login_title {
+    /* Definindo medidas do título*/
+
+    /* var(nome da variável) é a forma como utilizar a variável no css*/
+    color: var(--deep-grey);
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.box_login {
+    /* Definindo medidas da label*/
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input {
+    /* Estilizando os inputs*/
+    width: 100%;
+    background-color: var(--light-grey);
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 25px 10px 10px;
+    font-weight: 600;
+    color: var(--deep-grey);
+}
+
+.box_login span {
+    /* Estilizando as labels*/
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--medium-grey);
+    margin: 20px;
+    cursor: text;
+    transition: all 200ms ease;
+}
+
+.input:focus {
+    /*Pseudo classe para foco nas labels dentro dos inputs, que foi feito no javaScript*/
+    background-color: var(--whitesmoke);
+    border: 2px solid var(--deep-grey);
+}
+
+.box_login .span_active {
+    /* Definindo medidas para a fonte e margem da label, após execução da ação da label dentro do input que foi feito no JS*/
+    font-size: 0.7em;
+    margin: 8px 10px;
+}
+
+.login_icons {
+    /* Definindo medidas para a div dos botões das redes sociais "login_icons"*/
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login_icons img {
+    /* Definindo o tamanho das imagens dos ícones das redes sociais*/
+    width: 20px;
+}
+
+.icons_button {
+    /* Estilizando os botões das redes sociais "icons_button"*/
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.login_icons .icons_button:nth-child(1) {
+    /* Colocando cor no botão através da variável login_icons*/
+    background-color: var(--blue);
+}
+
+.login_icons .icons_button:nth-child(2) {
+    /* Colocando cor no botão*/
+    background-color: var(--light-grey);
+}
+
+.login_icons .icons_button:nth-child(3) {
+    /* Colocando cor no botão*/
+    background-color: var(--black);
+}
+
+.login_label_checkbox {
+    /* Definindo medidas  para a caixa de seleção*/
+    width: 100%;
+    margin-top: 15px 0 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.input_checkbox {
+    /* appearance: Tira os estilos do input.*/
+    appearance: none;
+
+    /* Estilizando o checkbox*/
+    width: 20px;
+    height: 20px;
+    background-color: var(--light-grey);
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.input_checkbox:checked::after {
+    /* Estilizando o checkbox com a Pseudo classe para antes de ativar a caixa*/
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid white;
+    margin: 100px;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+}
+
+.input_checkbox:checked {
+    /* Pseudo classe para o checkbox. Quando estiver ativado o fundo dele ficará vermelho*/
+    background-color: var(--red);
+}
+
+.div_login_button {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-bottom: 0px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.login_button {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.div_login_button:disabled {
+    display: none;
+}
+
+.div_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.login_link_suporte {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--medium-grey);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login_link_criar_conta {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--medium-grey);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.wallpaper {
+    width: 100%;
+    background-image: url(./images/wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+
+}

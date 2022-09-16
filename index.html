@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <link rel="icon" href="./images/icone_riot.png">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <meta charset="UTF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./script.js" defer></script>
+
+    <title>Riot Games</title>
+</head>
+
+<body>
+
+    <main>
+        <!-- Formulário de login -->
+        <section class="form_login">
+
+            <!-- Caixa do formulário -->
+            <div class="div_login">
+
+                <!-- Imagem da logo -->
+                <img src="./images/logo.png" class="login_logo">
+
+                <!-- Título do formulário -->
+                <h1 class="login_title">Fazer login</h1>
+
+                <!-- Div dos labels e inputs de email e senha -->
+                <label class="box_login">
+                    <span>nome de usuário</span>
+                    <input type="text" name="username" class="input">
+                </label>
+
+                <!-- Div dos labels e inputs de email e senha -->
+                <label class="box_login">
+                    <span>senha</span>
+                    <input type="password" name="password" class="input">
+                </label>
+
+                <!-- Ícones para login com redes sociais -->
+                <div class="login_icons">
+                    <button type="button" class="icons_button">
+                        <img src="./images/facebook-icon.png" alt="facebok">
+                    </button>
+
+                    <button type="button" class="icons_button">
+                        <img src="./images/google-icon.png" alt="gmail">
+                    </button>
+
+                    <button type="button" class="icons_button">
+                        <img src="./images/apple-icon.png" alt="apple">
+                    </button>
+                </div>
+
+                <!-- Caixa de seleção para manter logado -->
+                <label class="login_label_checkbox">
+                    <input type="checkbox" class="input_checkbox">
+                    Manter login
+                </label>
+            </div>
+
+            <!-- Botão de logar -->
+            <button type="button" class="div_login_button" disabled>
+                <img class="login_button" src="./images/seta.png" alt="seta">
+            </button>
+
+
+            <!-- Links de ajuda para o usuário criar uma conta ou redefinir seu cadastro -->
+            <div class="div_links">
+                <a href="#" class="login_link_suporte">não consegue iniciar sessão?</a>
+                <a href="#" class="login_link_criar_conta">criar conta</a>
+            </div>
+        </section>
+
+        <!-- Plano de fundo -->
+        <section class="wallpaper"></section>
+    </main>
+
+</body>
+
+</html>
